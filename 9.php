@@ -33,8 +33,8 @@ $result3 = $result % $div1;
 $result4 = $result % $div2;
 
 
-//echo ('Result = ' . $result . "\n\n");
-//echo ('+ 30% = ' . $result1 . "\n\n");
-//echo ('+ 120% = ' . $result2 . "\n\n");
-//echo ('Modulo by 3 = ' . $result3 . "\n\n");
-//echo ('Modulo by 5 = ' . $result4 . "\n\n");
+echo ('Result = ' . $result . "\n\n");
+echo ('+ 30% = ' . $result1 . "\n\n");
+echo ('+ 120% = ' . $result2 . "\n\n");
+echo ('Modulo by 3 = ' . $result3 . "\n\n");
+echo ('Modulo by 5 = ' . $result4 . "\n\n");
