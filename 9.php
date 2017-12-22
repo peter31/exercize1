@@ -1,17 +1,15 @@
 #!/usr/bin/env php
 <?php
 
+require __DIR__ . '/libraries/functions.php';
+
 echo ("\n");
 
 $arr = $argv;
-//print_r ($arr);
-
 array_shift($arr);
-//print_r ($arr);
 
-if (count($arr) <3) {
-    die("Wrong arguments count!\n\n");
-}
+checkElementsMoreThan($arr, 3);
+
 
 foreach ($arr as $key => $value) {
     if (strval(intval($value)) !== $value) {
