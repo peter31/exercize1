@@ -8,16 +8,10 @@ function intsum($number) {
         die("Argument $number isn't an integer!\n\n");
     }
     $number = strval($number);
-    $num1 = $number[0];
-    $num2 = $number[1];
-    $num3 = $number[2];
-    $number = intval($num1) + intval($num2) + intval($num3);
+    $number[1] = "0";
+    $number = intval($number);
     return $number;
 }
-$sum = intsum($number);
+$modNumber = intsum($number);
 
-echo 'sum = ' . $sum . "\n";
-
-
-
-
+echo '$number = ' . $modNumber . "\n";

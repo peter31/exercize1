@@ -4,12 +4,7 @@
 $array = [1, 2, 3, 4];
 
 function value_sum($array) {
-    $result = 0;
-    foreach ($array as $value) {
-        $result += $value;
-    }
-    $result = $result / count($array);
-    return $result;
+    return array_sum($array) / count($array);
 }
 
 print_r (value_sum($array));
