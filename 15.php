@@ -6,9 +6,10 @@ $array = [1, 2, 3, 4];
 function value_sum($array) {
     $result = 0;
     foreach ($array as $value) {
-        $result = $value + $result;
+        $result += $value;
     }
-    return($result);
+    $result = $result / count($array);
+    return $result;
 }
 
 print_r (value_sum($array));
