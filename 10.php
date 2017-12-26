@@ -1,10 +1,9 @@
 #!/usr/bin/env php
 <?php
 
-$array = $argv;
-
 function shifting($array) {
     array_shift($array);
+    return($array);
 }
 
 function integer_validation($array) {
@@ -21,10 +20,13 @@ function count_validation($array, $number) {
     }
 }
 
-shifting($array);
+$array = shifting($argv);
 integer_validation($array);
 count_validation($array, 4);
 
 print_r($array);
 
 echo (count($array));
+
+
+
