@@ -1,6 +1,12 @@
 #!/usr/bin/env php
 <?php
 
+foreach ($argv as $key => $value) {
+    if (count($argv) > 2) {
+        die("One argument can be allowed!\n\n");
+    }
+}
+
 $num = $argv[1];
 
 function intsum($num) {

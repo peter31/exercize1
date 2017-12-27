@@ -1,5 +1,10 @@
 #!/usr/bin/env php
 <?php
+foreach ($argv as $key => $value) {
+    if (count($argv) > 2) {
+        die("One argument can be allowed!\n\n");
+    }
+}
 
 $number = $argv[1];
 
