@@ -1,7 +1,7 @@
 #!/usr/bin/env php
 <?php
 
-$number = 235;
+$number = $argv[1];
 
 function intsum($number) {
     if ($number < 100 || $number > 999) {

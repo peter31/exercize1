@@ -5,7 +5,7 @@ $num = $argv[1];
 
 function intsum($num) {
     if ($num < 100 || $num > 999) {
-        die("Argument $num isn't an integer!\n\n");
+        die("Argument $num isn't an right integer!\n\n");
     }
     $c = $num % 10;
     $b = (($num - $c) % 100) / 10;
