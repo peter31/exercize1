@@ -1,5 +1,16 @@
 <?php
 
+function check_and_show_help($argv, $message)
+{
+    if (isset($argv[1]) && $argv[1] === '-h') {
+        echo(PHP_EOL);
+        echo($message);
+        echo(PHP_EOL);
+        die;
+    }
+}
+
+
 function arguments_count_validation($array, $number)
 {
     if (count($array) < $number) {
@@ -7,7 +18,7 @@ function arguments_count_validation($array, $number)
     }
 }
 
-function my_array_shift(&$array)
+function my_array_shift($array)
 {
     $value = null;
     foreach ($array as $key => $value) {
