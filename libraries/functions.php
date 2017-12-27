@@ -1,12 +1,5 @@
 <?php
 
-function checkElementsMoreThan($checkArr, $allowedNumber)
-{
-    if (count($checkArr) < $allowedNumber) {
-        die("Wrong arguments count!\n\n");
-    }
-}
-
 function arguments_count_validation($array, $number)
 {
     if (count($array) < $number) {
@@ -64,6 +57,40 @@ function sum_of_arr_count($array)
     $result = 0;
     foreach ($array as $value) {
         $result++;
+    }
+    return $result;
+}
+
+function longest_string($array)
+{
+    $result = 0;
+    foreach ($array as $value) {
+        $value = strval($value);
+        if (strlen($value) > $result) {
+            $result = $value;
+        }
+    }
+    return $result;
+}
+
+function max_integer($array)
+{
+    $result = 0;
+    foreach ($array as $value) {
+        if ($value > $result) {
+            $result = $value;
+        }
+    }
+    return $result;
+}
+
+function sum($array)
+{
+    $result = 0;
+    foreach ($array as $value) {
+        if ($value > 10) {
+            $result = $result + $value;
+        }
     }
     return $result;
 }
