@@ -1,23 +1,15 @@
 #!/usr/bin/env php
 <?php
 
-//require __DIR__ . '/libraries/functions.php';
+require __DIR__ . '/libraries/functions.php';
 
-$array = [1, 20, 3, 20, 5, 10];
+check_and_show_help($argv,
+    "Утилита находит сумму всех чисел больше 10 из переданных аргументами скрипта.
+Пример использования: ./longest_string.php 1, 20, 30\n");
 
-echo "Сумма чисел больше 10 из переданных аргументов\n";
-
-function sum($array)
-{
-    $result = 0;
-    foreach ($array as $value) {
-        if ($value > 10) {
-            $result = $result + $value;
-        }
-    }
-        return $result;
-}
-
+$array = my_array_shift($argv);
+integer_validation($array);
 $result = sum($array);
 
-echo ("$result");
+echo("\n");
+echo("Результат - " . $result . "\n\n");

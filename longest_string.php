@@ -4,9 +4,11 @@
 require __DIR__ . '/libraries/functions.php';
 
 check_and_show_help($argv,
-    "Утилита находит наиболее длинную строку среди переданных аргументов.
+    "Утилита находит наиболее длинный строковый элемент из переданных аргументами скрипта.
 Пример использования: ./longest_string.php one, two, three\n");
 
 $array = my_array_shift($argv);
 $result = longest_string($array);
-echo "$result";
+
+echo("\n");
+echo("Результат - " . $result . "\n\n");

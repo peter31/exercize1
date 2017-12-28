@@ -18,15 +18,28 @@ function arguments_count_validation($array, $number)
     }
 }
 
+//function my_array_shift($array)
+//{
+//    $value = null;
+//    foreach ($array as $key => $value) {
+//        unset($array[$key]);
+//        break;
+//    }
+//    return $value;
+//}
+
 function my_array_shift($array)
 {
-    $value = null;
     foreach ($array as $key => $value) {
         unset($array[$key]);
         break;
     }
-    return $value;
+    return $array;
 }
+
+
+
+
 
 function average_value($array) {
     return array_sum($array) / count($array);
@@ -74,10 +87,9 @@ function sum_of_arr_count($array)
 
 function longest_string($array)
 {
-    $result = 0;
+    $result = "";
     foreach ($array as $value) {
-        $value = strval($value);
-        if (strlen($value) > $result) {
+        if (strlen($value) > strlen($result)) {
             $result = $value;
         }
     }
