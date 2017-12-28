@@ -117,3 +117,23 @@ function sum($array)
     }
     return $result;
 }
+
+function repeat_via_while($array)
+{
+    $phrase = $array[1];
+    $number = intval($array[2]);
+    $count = 0;
+    while ($count <= $number) {
+        echo ("$phrase\n");
+        $count++;
+    }
+}
+
+function repeat_via_for($array)
+{
+    $phrase = $array[1];
+    $number = intval($array[2]);
+    for ($count = 0; $count <= $number; $count++) {
+        echo ("$phrase\n");
+    }
+}
