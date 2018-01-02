@@ -11,4 +11,4 @@ if (strlen($string) > 10)
     $string = str_pad($string, 12, $add);
 }
 
-var_dump($string);
+echo("$string\n");

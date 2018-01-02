@@ -13,6 +13,6 @@ if ($string == $search)
     $string = $string . $add;
 }
 
-var_dump($string);
+echo("$string\n");
 
 //$string = str_replace($search, $replace, $string);
