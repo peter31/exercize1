@@ -129,6 +129,38 @@ function repeat_via_while($array)
     }
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 function repeat_via_for($array)
 {
     $phrase = $array[1];
@@ -137,3 +169,47 @@ function repeat_via_for($array)
         echo ("$phrase\n");
     }
 }
+
+repeat_via_for(
+    repeat_via_for($phrase, $repeateNumber)
+    +function repeat_via_for($phrase, $repeatNumber)
+ +{
+    +    for ($count = 0; $count <= $repeatNumber; $count++) {
+        +        echo ("$phrase\n");
+ +    }
+ +}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function repeat_via_for($phrase, $repeatNumber)
+ {
+        for ($count = 0; $count <= $repeatNumber; $count++) {
+                echo ("$phrase\n");
+     }
+ }
+
+repeat_via_for($argv[1], intval($argv[2]));
