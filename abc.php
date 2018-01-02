@@ -1,13 +1,18 @@
 #!/usr/bin/env php
 <?php
 
-$array = ['dfg', 5,];
+$string = $argv[1];
+$search = 'abc';
+$replace = 'www';
+$add = 'zzz';
 
-function abc($array[0])
+if ($string == $search)
 {
-    if ($array[0] !== 'abc') {
-        $array[0] = 'www';
-    }
+    $string = $replace;
+} else {
+    $string = $string . $add;
 }
 
-abc()
+var_dump($string);
+
+//$string = str_replace($search, $replace, $string);
