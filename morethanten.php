@@ -1,7 +1,19 @@
 #!/usr/bin/env php
 <?php
 
+require __DIR__ . '/libraries/functions.php';
+
+check_and_show_help($argv,
+    "Утилита обрабатывает первую строку  переданую аргументом скрипта.
+Пример использования: ./explode.php 'onetwothree'\n");
+
+
+
+
+
 $string = $argv[1];
+
+
 
 if (strlen($string) > 10)
 {
