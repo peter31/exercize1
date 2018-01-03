@@ -7,13 +7,11 @@ check_and_show_help($argv,
     "Утилита обрабатывает первую строку  переданую аргументом скрипта.
 Пример использования: ./explode.php 'onetwothree'\n");
 
-
-
-
+if (count($argv) !== 2){
+    die("Только один аргумент допускается\n");
+}
 
 $string = $argv[1];
-
-
 
 if (strlen($string) > 10)
 {
