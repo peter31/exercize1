@@ -11,10 +11,7 @@ if (count($argv) !== 3 ){
     die("Необходимо два строчных элемента!\n");
 }
 
-$string = $argv[1];
-$delimiter = $argv[2];
-
-$array = explode($delimiter, $string);
+$array = explode($argv[2], $argv[1]);
 
 foreach ($array as $value){
         echo("$value\n");
