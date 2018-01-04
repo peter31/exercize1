@@ -12,7 +12,7 @@ if (count($argv) !== 2 ){
     die("Допустим только один аргумент!\n");
 }
 
-$integers = preg_replace('/[^0-9]/', '', $argv[1]);
-$result = strlen($integers);
+$result = pathinfo($argv[1]);
 
-echo("Количество цифр в строке = $result\n");
+echo('Имя файла - ' . $result['filename'] . "\n");
+echo('Расширение файла - ' . $result['extension'] . "\n");
