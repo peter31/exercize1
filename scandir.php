@@ -10,9 +10,16 @@ check_and_show_help($argv,
 if (count($argv) !== 2 ){
     die("Допустим только один аргумент!\n");
 }
+echo ("\n");
 
-foreach (scandir($argv[1]) as $filename) {
-    if (filesize($filename) > 200) {
-        echo ($filename . " = " . filesize($filename) . " bytes\n");
+$fullpath = '/' . trim($argv[1], '/') . '/';
+
+foreach (scandir($fullpath) as $filename) {
+    $size = filesize($filename) / 1024;
+    if ($size > 1) {
+        echo ($fullpath . $filename . " = " . $size . " Kbytes\n");
     }
 }
+
+var_dump($fullpath);
+echo ("\n");
