@@ -23,14 +23,9 @@ if (!$link) {
     exit();
 }
 
-foreach ($users as $key => $value){
+foreach ($users as $key => $value) {
     $query = 'INSERT INTO users SET name = "' . $value[0] . '", email = "' . $value[1] . '"';
     mysqli_query($link, $query);
 }
 
 mysqli_close($link);
-
-
-
-
-
