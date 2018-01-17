@@ -19,7 +19,7 @@ if (!is_dir($path)) {
     exit ("Указанный путь не существует!\n\n");
 }
 
-$files = [];
+$files =[];
 foreach (scandir($path) as $value) {
     if (is_file($value)) {
         $files[] = $path . $value;
@@ -41,5 +41,5 @@ if (count($result) !==0) {
     }
     echo("\n");
 } else {
-    echo("Данный путь не содержит искомых файлов\n\n");
+    echo("Директория не содержит искомых файлов\n\n");
 }
