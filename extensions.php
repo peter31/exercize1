@@ -19,15 +19,10 @@ if (count(scandir($argv[1])) == 0) {
 $path = $argv[1];
 $extensions = explode(',', $argv[2]);
 
-$pathElements = [];
-foreach ( scandir($path) as $value ) {
-    $pathElements[] = $path . $value;
-}
-
 $files = [];
-foreach ( $pathElements as $value ) {
+foreach ( scandir($path) as $value ) {
     if ( is_file($value) ) {
-    $files[] = $value;
+        $files[] = $value;
     }
 }
 
