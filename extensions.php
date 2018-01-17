@@ -43,5 +43,3 @@ if ( count($result) !==0 ) {
 } else {
     echo("Данный путь не содержит искомых файлов\n\n");
 }
-
-var_dump($files);
