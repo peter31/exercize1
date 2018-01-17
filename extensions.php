@@ -22,7 +22,7 @@ $extensions = explode(',', $argv[2]);
 $files = [];
 foreach ( scandir($path) as $value ) {
     if ( is_file($value) ) {
-        $files[] = $value;
+        $files[] = $path . $value;
     }
 }
 
@@ -43,3 +43,5 @@ if ( count($result) !==0 ) {
 } else {
     echo("Данный путь не содержит искомых файлов\n\n");
 }
+
+var_dump($files);
