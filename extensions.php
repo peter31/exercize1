@@ -1,4 +1,4 @@
-#!/usr/bin/env php
+#!/usr/bin/php
 <?php
 
 require __DIR__ . '/libraries/functions.php';
@@ -21,7 +21,7 @@ if (!is_dir($path)) {
 
 $files =[];
 foreach (scandir($path) as $value) {
-    if (is_file($value)) {
+    if (is_file($path . $value)) {
         $files[] = $path . $value;
     }
 }
