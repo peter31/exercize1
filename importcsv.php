@@ -16,15 +16,19 @@ while (($usersRow = fgetcsv($handler, 100, ',')) !== FALSE) {
 
 fclose($handler);
 
+
 $link = mysqli_connect('localhost', 'root',  'qwerty', 'shop');
 
 if (!$link) {
-    printf("Can't connect to database\n");
-    exit();
+    exit("Can't connect to database\n");
 }
 
 foreach ($users as $key => $value) {
+
+
     $query = 'INSERT INTO users SET name = "' . $value[0] . '", email = "' . $value[1] . '"';
+    $query = "INSERT INTO users SET name = $value[0], email = $value[1]";
+    $query = 'INSERT INTO users SET name = ' $value[0]',' 'email = ' $value[1];
     mysqli_query($link, $query);
 }
 
